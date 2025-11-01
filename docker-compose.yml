@@ -6,6 +6,6 @@ services:
     volumes:
       - ./data:/data
     environment:
-      JVM_XMX: "4096M"
-      JVM_XMS: "1024M"
+      JVM_XMX: "4G"
+      JVM_XMS: "1G"
     restart: unless-stopped
