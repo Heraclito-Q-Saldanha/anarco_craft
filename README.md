@@ -3,7 +3,7 @@ meu servidor de minecraft survival
 
 você poder jogar em
 ```
-mc.heraclitoqsaldanha.online
+mc.alvorada.site
 ```
 
 caso queira rodar ele você mesmo
