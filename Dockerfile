@@ -1,11 +1,12 @@
 FROM alpine
 
 RUN apk -U upgrade
-RUN apk add openjdk21-jre-headless
+RUN apk add openjdk21-jre-headless --no-cache
 
-RUN mkdir -p /data
+RUN mkdir /data
 WORKDIR /data
 
-ENTRYPOINT ["java"]
+ENV JVM_XMX=4096M
+ENV JVM_XMS=1024M
 
-CMD ["-Xmx1024M", "-Xms1024M", "-jar", "server.jar", "nogui"]
+ENTRYPOINT ["sh", "-c", "java -Xmx${JVM_XMX} -Xms${JVM_XMS} -jar server.jar nogui"]
