@@ -3,7 +3,9 @@ services:
     build: .
     ports:
       - "25565:25565/tcp"
-      - "19132:19132/udp"
     volumes:
       - ./data:/data
-    restart: on-failure:5
+    environment:
+      JVM_XMX: "4096M"
+      JVM_XMS: "1024M"
+    restart: unless-stopped
