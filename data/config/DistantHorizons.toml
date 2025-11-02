@@ -21,7 +21,7 @@ maxSyncOnLoadRequestDistance = 256
 synchronizeOnLoad = true
 #
 # Defines the distance allowed to generate around the player.
-maxGenerationRequestDistance = 32
+maxGenerationRequestDistance = 10
 #
 # Defines the X-coordinate of the central point for generation boundaries, in blocks.
 generationBoundsX = 0
