@@ -3,9 +3,10 @@ services:
     build: .
     ports:
       - "25565:25565/tcp"
+      - "25575:25575/tcp"
     volumes:
       - ./data:/data
     environment:
-      JVM_XMX: "4G"
+      JVM_XMX: "20G"
       JVM_XMS: "1G"
     restart: unless-stopped
