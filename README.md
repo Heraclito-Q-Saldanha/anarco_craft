@@ -8,6 +8,7 @@ mc.alvorada.site
 
 caso queira rodar ele você mesmo
 ```
+cp .env.example .env
 docker compose up -d
 ```
 
