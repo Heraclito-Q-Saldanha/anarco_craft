@@ -3,7 +3,7 @@ services:
     build: .
     user: "${UID}:${GID}"
     networks:
-      - webnet
+      - anarco
     ports:
       - "25575:25575/tcp"
     volumes:
@@ -17,13 +17,13 @@ services:
     user: "${UID}:${GID}"
     container_name: viaproxy
     networks:
-      - webnet
+      - anarco
     ports:
       - "25565:25565/tcp"
     volumes:
       - ./data/viaproxy:/app/run
 
 networks:
-  webnet:
-    name: webnet
+  anarco:
+    name: anarco
     driver: bridge
