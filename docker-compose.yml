@@ -1,13 +1,29 @@
 services:
-  server:
+  minecraft:
     build: .
     user: "${UID}:${GID}"
+    networks:
+      - webnet
     ports:
-      - "25565:25565/tcp"
       - "25575:25575/tcp"
     volumes:
-      - ./data:/data
+      - ./data/minecraft:/data
     env_file:
       - path: .env
         required: true
     restart: unless-stopped
+  viaproxy:
+    image: ghcr.io/viaversion/viaproxy:latest
+    user: "${UID}:${GID}"
+    container_name: viaproxy
+    networks:
+      - webnet
+    ports:
+      - "25565:25565/tcp"
+    volumes:
+      - ./data/viaproxy:/app/run
+
+networks:
+  webnet:
+    name: webnet
+    driver: bridge
