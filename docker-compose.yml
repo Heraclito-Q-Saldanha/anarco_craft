@@ -20,6 +20,7 @@ services:
       - anarco
     ports:
       - "25565:25565/tcp"
+      - "19132:19132/udp"
     volumes:
       - ./data/viaproxy:/app/run
 
