@@ -1,16 +1,16 @@
 # anarco_craft
 
-meu servidor de minecraft survival
+my minecraft survival server
 
-você poder jogar em
+you can play on
 
-```
+```sh
 mc.alvorada.me
 ```
 
-caso queira rodar ele você mesmo
+in case you want to run it yourself
 
-```
+```sh
 cp .env.example .env
 docker compose up -d
 ```
