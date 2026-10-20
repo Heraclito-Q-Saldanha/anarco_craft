@@ -1,31 +1,25 @@
 services:
   minecraft:
-    build: .
-    user: "${UID}:${GID}"
-    networks:
-      - anarco
+    image: itzg/minecraft-server
     ports:
+      - "25565:25565/tcp"
       - "25575:25575/tcp"
-    volumes:
-      - ./data/minecraft:/data
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      VERSION: "26.3"
+      ICON: /icon.png
+      OVERRIDE_ICON: true
+      ENABLE_RCON: "true"
+      RCON_PORT: "25575"
     env_file:
       - path: .env
         required: true
-    restart: unless-stopped
-  viaproxy:
-    image: ghcr.io/viaversion/viaproxy:latest
-    user: "${UID}:${GID}"
-    container_name: viaproxy
-    networks:
-      - anarco
-    ports:
-      - "25565:25565/tcp"
-      - "19132:19132/udp"
     volumes:
-      - ./data/viaproxy:/app/run
+      - minecraft:/data/
+      - ./data/mods:/mods:ro
+      - ./data/icon.png:/icon.png:ro
     restart: unless-stopped
 
-networks:
-  anarco:
-    name: anarco
-    driver: bridge
+volumes:
+  minecraft:
