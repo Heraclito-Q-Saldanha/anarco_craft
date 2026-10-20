@@ -1,15 +1,18 @@
 # anarco_craft
+
 meu servidor de minecraft survival
 
 você poder jogar em
+
 ```
-mc.alvorada.site
+mc.alvorada.me
 ```
 
 caso queira rodar ele você mesmo
+
 ```
 cp .env.example .env
 docker compose up -d
 ```
 
-Dual-licensed under [MIT](LICENSE-MIT) or the [UNLICENSE](UNLICENSE).
+This project is licensed under either the [BSD Zero Clause License](LICENSE) or the [Unlicense](UNLICENSE), at your option.
