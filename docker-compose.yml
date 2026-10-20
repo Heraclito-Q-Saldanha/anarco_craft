@@ -16,8 +16,9 @@ services:
       - path: .env
         required: true
     volumes:
-      - minecraft:/data/
+      - minecraft:/data
       - ./data/mods:/mods:ro
+      - ./data/config:/config:ro
       - ./data/icon.png:/icon.png:ro
     restart: unless-stopped
 

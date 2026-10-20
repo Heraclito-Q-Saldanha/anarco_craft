@@ -1,0 +1,14 @@
+_version = 5
+
+[server]
+	realTimeUpdateDistanceRadiusInChunks = 128
+	maxSyncOnLoadRequestDistance = 256
+	serverKey = "AnarcoCraft"
+	maxGenerationRequestDistance = 512
+	serverId = -1913544264
+
+	globalBandwidthLimit = 0
+    playerBandwidthLimit = 500
+
+	[common.multiThreading]
+		numberOfThreads = 4
