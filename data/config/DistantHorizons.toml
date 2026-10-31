@@ -11,4 +11,4 @@ _version = 5
     playerBandwidthLimit = 100
 
 	[common.multiThreading]
-		numberOfThreads = 4
+		numberOfThreads = 6
