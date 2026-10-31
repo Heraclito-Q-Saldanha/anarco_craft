@@ -8,7 +8,7 @@ _version = 5
 	serverId = -1913544264
 
 	globalBandwidthLimit = 0
-    playerBandwidthLimit = 500
+    playerBandwidthLimit = 100
 
 	[common.multiThreading]
 		numberOfThreads = 4
