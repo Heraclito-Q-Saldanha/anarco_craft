@@ -1,10 +1,10 @@
 _version = 5
 
 [server]
-	realTimeUpdateDistanceRadiusInChunks = 128
-	maxSyncOnLoadRequestDistance = 256
+	realTimeUpdateDistanceRadiusInChunks = 64
+	maxSyncOnLoadRequestDistance = 64
 	serverKey = "AnarcoCraft"
-	maxGenerationRequestDistance = 512
+	maxGenerationRequestDistance = 128
 	serverId = -1913544264
 
 	globalBandwidthLimit = 0
